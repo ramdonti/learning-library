@@ -63,7 +63,7 @@ This lab assumes you have:
 
 1. Open the navigation menu, click on **Compute**, and then click **Instances**
 
-  ![](.\images/create-instance-oci.png " ")
+  ![](./images/create-instance-oci.png " ")
 
 2. Compute page will be shown as below. The Compute service helps you provision VMs and bare metal instances to meet your compute and application requirements.  Navigate to **Instances**, and then click on **Create Instance**
 

@@ -36,9 +36,6 @@ This will construct an email in your default mail application that is auto popul
 3. Include the **Lab Number**, **Step Number**, and **Sub-Step Number** where you've encounter the issue.
 4. Attach a **Screenshot** and **Any Troubleshooting Steps** you've tried so we can recreate the issue and provide a timely and accurate solution.
 
-    ![](images/problem-picture2.png)
-
-
 ## Acknowledgements
 * **Author** - Ramesh Babu Donti, Principal Cloud Architect, NA Cloud Engineering
 * **Contributors** -  Devinder Pal Singh, Senior Cloud Engineer, NA Cloud Engineering

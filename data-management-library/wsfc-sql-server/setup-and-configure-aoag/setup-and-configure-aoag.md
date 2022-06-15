@@ -68,7 +68,7 @@ You may now **proceed to the next lab**.
   ![](./images/ms-sql-restart.png " ")
 7. To create the SQL service domain service account: From the task bar click search button and search for run, once the run command opens type **dsa.msc** to open the Active Directory users and computer, and then click on **users**
 
-  ![](./images/mssql-serviceaccount-create.png " ")
+  ![](./images/windows-command-dsa.png " ")
 
 8. Provide the username details, and then click on **Next**.
 
