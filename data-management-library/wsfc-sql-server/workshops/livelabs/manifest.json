@@ -19,7 +19,7 @@
       "filename": "../../setup-the-windows-active-directory-in-compute-instance/setup-the-windows-active-directory-in-compute-instance.md"
     },
     {
-      "title": "Lab 2: Provisioning the Compute Instance from Market Place Image for SQL Server 2019",
+      "title": "Lab 2: Provision the Compute Instance from Market Place Image for SQL Server 2019",
       "description": "Step by step instruction on how to install SQL Server from OCI MarketPlace image",
       "filename": "../../installation-of-microsoft-sql-server-2019/installation-of-microsoft-sql-server-2019.md"
     },
@@ -32,6 +32,11 @@
       "title": "Lab 4: Setup and Configure the Microsoft SQL Server Always on Availability Group setup",
       "description": "Step by step instruction on setup and configure the Microsoft Always on Availability Group",
       "filename": "../../setup-and-configure-aoag/setup-and-configure-aoag.md"
+    },
+    {
+      "title": "Lab 5: Setup and Configure the Witness Server for Windows Failover Cluster",
+      "description": "Setup and Configure the Witness Server for Windows Failover Cluster",
+      "filename": "../../setup-witness-wsfc/setup-witness-wsfc.md"
     },
     {
       "title": "Need Help?",

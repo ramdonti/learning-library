@@ -9,7 +9,7 @@ This reference architecture includes a Microsoft SQL Server Always On availabili
 
   ![](./images/2nodeaoag.png " ")
 
-Estimated Workshop Time: 3 Hour
+Estimated Workshop Time: 4 Hour 30 min
 
 
 
@@ -39,4 +39,4 @@ For any technical issues related to OCI and Compute instance, please contact Ora
 ## Acknowledgements
 * **Author** - Ramesh Babu Donti, Principal Cloud Architect, NA Cloud Engineering
 * **Contributors** -  Devinder Pal Singh, Senior Cloud Engineer, NA Cloud Engineering
-* **Last Updated By/Date** - Ramesh Babu Donti, Principal Cloud Architect, NA Cloud Engineering, April 2022
+* **Last Updated By/Date** - Ramesh Babu Donti, Principal Cloud Architect, NA Cloud Engineering, June 2022
