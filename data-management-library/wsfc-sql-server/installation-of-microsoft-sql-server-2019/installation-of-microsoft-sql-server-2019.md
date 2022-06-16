@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This lab walks you through the steps how to provision the Microsoft SQL Server 2019 from the Market Place Image in compute instance.
+This lab walks you through the steps of how to provision the Microsoft SQL Server 2019 from the Market Place Image in compute instance.
 
 
 Estimated Time:  1 hour
@@ -10,7 +10,7 @@ Estimated Time:  1 hour
 
 ### Objectives
 In this lab, you will learn to :
-* Deploy the Microsoft SQL Server 2019 from marketplace image
+* Deploy the Microsoft SQL Server 2019 from the marketplace image
 * Add the Computer Instances to Active Directory Domain Controller
 
 ### Prerequisites  
@@ -31,13 +31,13 @@ This lab assumes you have:
   ![](./images/compute-instance-marketplace.png " ")
 
 
-3. Choose the compartment and click on **Launch Instance**, the screen will be take to the launch compute instance.
+3. Choose the compartment and click on **Launch Instance**, the screen will be taken to the launch compute instance.
 
   ![](./images/compute-instance-compartment.png " ")
 
-### Note: Please note that Minimum of 744 hours will be charged for SQL Server Marketplace image.
+### Note: Please note that a minimum of 744 hours will be charged for the MS SQL Server Marketplace image.
 
-4. Choose the Instance name and compartment where the compute instance needs to created, select the desired Availability Domain.
+4. Choose the Instance name and compartment where the compute instance needs to be created, and select the desired Availability Domain.
 
   ![](./images/compute-instance-ad.png " ")
 
@@ -45,21 +45,21 @@ This lab assumes you have:
 
   ![](./images/compute-instance-shape.png " ")
 
-6. Choose the compartment where the compute instance should resides, and then choose the private subnet as shown in below image.
+6. Choose the compartment where the compute instance should reside, and then choose the private subnet as shown in the below image.
 
   ![](./images/compute-instance-compart.png " ")
 
-7. Choose the default values an click on **Create** instance
+7. Choose the default values and click on **Create** instance
 
   ![](./images/compute-instance-default.png " ")
 
-8. Once the compute instance provisioning completed we could able to see the instance state is running.
+8. Once the compute instance provisioning is completed we could able to see the instance state is running.
 
     ![](./images/compute-instance-provision.png " ")
 
 ##  Task 2: Provision the SQL Server 2019 from Market Place for Node2
 
-* Repeat the all steps from Task 1 to provision the Microsoft SQL Server from Marketplace for Node2 in different private subnet.
+* Repeat all steps from Task 1 to provision the Microsoft SQL Server from Marketplace for Node2 in the different private subnet.
 
 ##  Task 3:  Add the Node1 Server to Active Directory Domain
 
@@ -72,11 +72,11 @@ This lab assumes you have:
 3. Click on **Ethernet** connection, and then click on **properties**
 
     ![](./images/windows-network-ethernet.png " ")
-4. Click on **IPv4**, and then click on **properties**.  Choose the **Use the following DNS Server Addresses:** and provide the private IP address of Domain which we built in Lab1, and click on **OK** to apply the changes.
+4. Click on **IPv4**, and then click on **properties**.  Choose the **Use the following DNS Server Addresses:** and provide the private IP address of the Domain which we built in Lab1, and click on **OK** to apply the changes.
 
     ![](./images/windows-network-ip.png " ")
 
-5. Open the File Explorer and right click on **This PC**, and then click on **properties**
+5. Open the File Explorer and right-click on **This PC**, and then click on **properties**
     ![](./images/windows-network-properties.png " ")
 
 6. The following popup will be opened, and click on **Change Settings**
@@ -91,11 +91,11 @@ This lab assumes you have:
 
     ![](./images/windows-network-changepass.png " ")
 
-9. On successful adding the server to the domain we can see the successful message as shown as below.
+9. On successful adding the server to the domain we can see the successful message as shown below.
 
     ![](./images/windows-network-successful.png " ")
 
-10. The system will ask for restart popup message on the screen, and then click on **ok** to reboot the system.
+10. The system will ask for a restart popup message on the screen, and then click on **ok** to reboot the system.
 
     ![](./images/windows-restart.png " ")
 
@@ -103,13 +103,13 @@ This lab assumes you have:
 
     ![](./images/windows-restart-popup.png " ")
 
-12. After successful restart.  Perform the RDP connection to the server from the bastion host.  Open the **Control Panel**, and then navigate to **System and Security\System** to see the **full computer name**.
+12. After a successful restart.  Perform the RDP connection to the server from the bastion host.  Open the **Control Panel**, and then navigate to **System and Security\System** to see the **full computer name**.
 
     ![](./images/windows-domain-verify.png " ")
 
 ##  Task 4:  Add the Node2 Server to Active Directory Domain
 
-* Repeat the all steps from Task 3 to add the Node2 server to Active Directory Domain.
+* Repeat all steps from Task 3 to add the Node2 server to Active Directory Domain.
 
   You may now **proceed to the next lab.**
 ## Learn More

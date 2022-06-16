@@ -2,7 +2,7 @@
 
 ## About this Workshop
 
-This hands-on workshop provides users with step-by-step instructions how to deploy the WSFC ( Windows Server Failover clustering ) and configure the Microsoft SQL Server Always on Availability Group setup.
+This hands-on workshop provides users with step-by-step instructions on how to deploy the WSFC ( Windows Server Failover clustering ) and configure the Microsoft SQL Server Always on Availability Group setup.
 
 **Architecture:**
 This reference architecture includes a Microsoft SQL Server Always On availability group, bastion server, Active Directory domain controller, and a quorum witness host on Oracle Cloud Infrastructure.
