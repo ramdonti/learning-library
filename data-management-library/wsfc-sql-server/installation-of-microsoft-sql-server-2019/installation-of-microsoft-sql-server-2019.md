@@ -24,7 +24,7 @@ This lab assumes you have:
 
 1. Open the navigation menu, click **Marketplace**, and then click **All Applications**
 
-  ![OCI Marketplace](./images/compute-instance-oci.png " ")
+  ![OCI Marketplace](./images/compute-instance-oci.png "OCI Marketplace")
 
 2. Marketplace **All Applications** will be shown below. Search for **SQL Server 2019** image and select the desired edition for SQL Server. We have Enterprise and Standard Edition available.  Always On Basic Availability Groups provide a high availability solution for SQL Server from version 2016 and above on Standard Edition. A basic availability group supports a failover environment for a single database in Standard Edition.  
 
@@ -35,7 +35,7 @@ This lab assumes you have:
 
   ![OCI launch instance](./images/compute-instance-compartment.png " ")
 
-### Note: Please note that a minimum of 744 hours will be charged for the MS SQL Server Marketplace image.
+> **Note: Please note that a minimum of 744 hours will be charged for the MS SQL Server Marketplace image.
 
 4. Choose the Instance name and compartment where the compute instance needs to be created, and select the desired Availability Domain.
 
@@ -87,7 +87,7 @@ This lab assumes you have:
 
     ![Windows system name change](./images/windows-network-changedomain.png " ")
 
-8. The system will prompt for the domain administrator **username** and **password**. Provide the **domainname\username* and **password**, and then click on **ok** to apply the changes.
+8. The system will prompt for the domain administrator **username** and **password**. Provide the           **domainname\username* and **password**, and then click on **ok** to apply the changes.
 
     ![Domain credentials](./images/windows-network-changepass.png " ")
 
