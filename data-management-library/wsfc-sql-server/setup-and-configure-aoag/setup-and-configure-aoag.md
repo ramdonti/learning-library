@@ -23,146 +23,162 @@ This lab assumes you have:
 ##  Task 1: Create Sample Database
 
 1. RDP to the Bastion host server using the username **.\opc** and password, from the Bastion host open the Remote Desktop and connect to the Node1 server using the private IP Address.
-2. Open SSMS from **Windows Start Menu**, once opened choose the Server type **Database Engine**, provide the Node1 server name, Choose the **Authentication** type Windows Authentication, and then click on **Connect**
 
-  ![Microsoft SQL Server Management studio](./images/msql-managementstudio.png " ")
+2. Open SSMS from **Windows Start Menu**, once opened choose the Server type **Database Engine**, provide the Node1 server name, Choose the **Authentication** type Windows Authentication, and then click on **Connect**.
 
-3. Once we successfully connected to the database engine, click on **New Query** and create the sample database using the following script, and then click on **Execute** command to create the sample database.  
+  ![Microsoft SQL Server Management Studio](./images/msql-managementstudio.png "Microsoft SQL Server Management Studio")
+
+3. Once you successfully connected to the database engine, click on **New Query** and create the sample database using the following script, and then click on **Execute** command to create the sample database.  
 
     **Create database TestAOAG;**
 
-  ![Microsoft SQL Server Management studio query](./images/msql-mgmtstudiocreatedb.png " ")
+  ![Microsoft SQL Server Management Studio query](./images/msql-mgmtstudiocreatedb.png "Microsoft SQL Server Management Studio query")
 
 4. The database will be visible as shown in the following image.
-  ![Microsoft SQL Server database details](./images/msql-mgmtstudiocreateview.png " ")
 
-5. select **databases**, right click on newly created database, and then select **tasks**, choose **Backup**
-  ![Microsoft SQL Server database backup](./images/msql-mgmtstudio-dbbackup.png " ")
+  ![Microsoft SQL Server database details](./images/msql-mgmtstudiocreateview.png "Microsoft SQL Server database details")
 
-6. choose the backup location and click on **ok**.
-  ![Microsoft SQL Server database backup location](./images/msql-mgmtstudio-dbbackupconfirm.png " ")
-You may now **proceed to the next lab**.
+5. Select **databases**, right click on newly created database, and then select **tasks**, choose **Backup**
+
+  ![Microsoft SQL Server database backup](./images/msql-mgmtstudio-dbbackup.png "Microsoft SQL Server database backup")
+
+6. Choose the backup location and click on **ok**.
+
+  ![Microsoft SQL Server database backup location](./images/msql-mgmtstudio-dbbackupconfirm.png "Microsoft SQL Server database backup location")
+
+  You may now **proceed to the next lab**.
 
 ##  Task 2: Enable the Always-On feature for Node1 Database Engine and configure the SQL Engine services to run with Domain Users.
 
 1. From the Windows taskbar, click the search button and search for **SQL Server 2019 Configuration Manager** and click on SQL Server 2019 Configuration Manager app.
 
-  ![Windows search command](./images/mssql-configmanager-search.png " ")
+  ![Windows search command](./images/mssql-configmanager-search.png "Windows search command")
 
-2. Right-click on database Engine **SQL Server (MSSQLSERVER)**, and then click on **Properties**
+2. Right-click on database Engine **SQL Server (MSSQLSERVER)**, and then click on **Properties**.
 
-  ![Microsoft SQL Server configuration manager ](./images/mssql-configmanager-dbservices.png " ")
+  ![Microsoft SQL Server configuration manager](./images/mssql-configmanager-dbservices.png "Microsoft SQL Server configuration manager")
 
 3. Click on **Always on Availability Groups** and select the check box **Enable Always on Availability Groups**, and then click on Apply.
 
-  ![Microsoft SQL Server engine properties](./images/mssql-configmanager-dbservices-properties.png " ")
+  ![Microsoft SQL Server engine properties](./images/mssql-configmanager-dbservices-properties.png "Microsoft SQL Server engine properties")
+
 4. The following **Warning** message will appear on the screen, and then click on **OK**.
 
-  ![Microsoft SQL Server engine always on Availability groups](./images/mssql-configmanager-warring.png " ")
+  ![Microsoft SQL Server engine Always On Availability Groups](./images/mssql-configmanager-warring.png "Microsoft SQL Server engine Always On Availability Groups")
 
 5. Finally click on **OK** to apply the changes.
 
-  ![Microsoft SQL Server engine always on Availability groups](./images/mssql-configmanager-apply.png " ")
-6. To apply the changes we need to restart the SQL Engine, Right-click on database Engine **SQL Server (MSSQLSERVER)**, and then click Restart.
+  ![Microsoft SQL Server engine Always On Availability Groups](./images/mssql-configmanager-apply.png "Microsoft SQL Server engine Always On Availability Groups")
 
-  ![Microsoft SQL Server restart](./images/ms-sql-restart.png " ")
-7. To create the SQL service domain service account: From the taskbar click the search button and search for the run command, once the run command opens type **dsa.msc** to open the Active Directory users and computer, and then click on **users**
+6. To apply the changes restart the SQL Engine, Right-click on database Engine **SQL Server (MSSQLSERVER)**, and then click Restart.
 
-  ![Windows AD users and computers](./images/windows-command-dsa.png " ")
+  ![Microsoft SQL Server restart](./images/ms-sql-restart.png "Microsoft SQL Server restart")
+
+7. To create the SQL service domain service account: From the taskbar click the search button and search for the run command, once the run command opens type **dsa.msc** to open the Active Directory users and computer, and then click on **users**.
+
+  ![Windows AD users and computers](./images/windows-command-dsa.png "Windows AD users and computers")
 
 8. Provide the username details, and then click on **Next**.
 
-  ![Windows AD create users ](./images/mssql-serviceaccount-name.png " ")
+  ![Windows AD create users](./images/mssql-serviceaccount-name.png "Windows AD create users")
 
 9. Provide the password and confirm the password, and then click on **Next** and click on **Finish** to close the create window.
-  ![Windows AD users details](./images/mssql-serviceaccount-password.png " ")
 
-  ![Windows AD users password](./images/mssql-config-manager-search.png " ")
+  ![Windows AD users details](./images/mssql-serviceaccount-password.png "Windows AD users details")
+
+  ![Windows AD users password](./images/mssql-config-manager-search.png "Windows AD users password")
 
 11. From the taskbar, click the search button and search for **SQL Server 2019 Configuration Manager** and click on SQL Server 2019 Configuration Manager app.
 
 12. Right-click on database Engine **SQL Server (MSSQLSERVER)** and then click on **Properties**. Click on **Log On** and provide the user name and password created in the above step, and then click on **apply** and **OK** to apply changes.
 
- ![Microsoft SQL Server engine log on account](./images/mssql-configmanager-logon.png " ")
+ ![Microsoft SQL Server engine log on account](./images/mssql-configmanager-logon.png "Microsoft SQL Server engine log on account")
 
 ##  Task 3: Enable the Always-On feature for Node2 Database Engine and configure the SQL Engine services to run with Domain Users.
 
-Repeat all the steps from Task 2 to enable the **Always On feature for Node2**.
+  * Repeat all the steps from Task 2 to enable the **Always On feature for Node2**.
 
-##  Task 4: Grant permissions to Virtual Computer Object
+##  Task 4: Grant permissions to Virtual Computer Object.
 
 1. Ensure that you are logged in as a user that has permission to create computer objects in the domain.
 
 2. From the taskbar click the search button and search for the run, once the run command opens type **dsa.msc** to open the Active Directory users and computer.
 
-  ![Windows AD users and computers](./images/windows-dsa.png " ")
+  ![Windows AD users and computers](./images/windows-dsa.png "Windows AD users and computers")
 
-3. Click View and select **Advanced Features** to view the Advanced features  
-  ![Windows AD users and computers view](./images/windows-dsa-view.png " ")
+3. Click View and select **Advanced Features** to view the Advanced features.  
+  ![Windows AD users and computers view](./images/windows-dsa-view.png "Windows AD users and computers view")
 
 4. Right click on Computers, select the **Properties**.
-  ![Windows AD computer properties](./images/windows-dsa-computers.png " ")
+  ![Windows AD computer properties](./images/windows-dsa-computers.png "Windows AD computer properties")
 
 5. Click on **Security**, and then click on **Add**.
 
-  ![Windows AD computer security](./images/windows-dsa-security.png " ")
+  ![Windows AD computer security](./images/windows-dsa-security.png "Windows AD computer security")
 
-6. Click on **Object Types**
+6. Click on **Object Types**.
 
-  ![Windows AD object types](./images/windows-dsa-objecttype.png " ")
+  ![Windows AD object types](./images/windows-dsa-objecttype.png "Windows AD object types")
 
-7. Select the check box **Computers**, and then click on **OK**
+7. Select the check box **Computers**, and then click on **OK**.
 
-  ![Windows AD object types select](./images/windows-dsa-serach-computer.png " ")
+  ![Windows AD object types select](./images/windows-dsa-serach-computer.png "Windows AD object types select")
 
-8. Search for the cluster name which we created in Lab 3: Task 5 and then click on **OK**.
+8. Search for the cluster name created in Lab 3: Task 5 and then click on **OK**.
 
-  ![](./images/windows-dsa-computer-name.png " ")
+  ![Windows AD object name](./images/windows-dsa-computer-name.png "Windows AD object name")
 
-9. select the cluster name and click on **Advanced**
+9. select the cluster name and click on **Advanced**.
 
-  ![Windows cluster computer security settings](./images/windows-dsa-serach-computer-advan.png " ")
+  ![Windows cluster computer security settings](./images/windows-dsa-serach-computer-advan.png "Windows cluster computer security settings")
 
+10. Click on **Edit** to edit the permissions.
 
-10. Click on **Edit** to edit the permissions
-
-  ![Windows cluster computer advanced security settings](./images/windows-dsa-permissions.png " ")
+  ![Windows cluster computer advanced security settings](./images/windows-dsa-permissions.png "Windows cluster computer advanced security settings")
 
 11. Choose the **Create Computer Objects** permission.
 
-  ![Windows cluster computer permissions](./images/windows-dsa-serach-computer-objects.png " ")
+  ![Windows cluster computer permissions](./images/windows-dsa-serach-computer-objects.png "Windows cluster computer permissions")
 
 12. Click on **Apply** and click on **OK** to apply the changes.
 
-  ![Windows cluster computer permissions](./images/windows-dsa-serach-computer-apply.png " ")
+  ![Windows cluster computer permissions](./images/windows-dsa-serach-computer-apply.png "Windows cluster computer permissions")
 
 13. Click on **Apply** and click **OK** to grant permission to the computer account.  
 
-  ![Windows cluster computer permissions apply](./images/windows-dsa-serach-computer-grant.png " ")
+  ![Windows cluster computer permissions apply](./images/windows-dsa-serach-computer-grant.png "Windows cluster computer permissions apply")
 
 ##  Task 5: Configure Always On Availability Group
 
-1. Open SSMS from **Windows Start Menu**, once opened choose the Server type **Database Engine**, provide the Node1 server name, Choose the **Authentication** type Windows Authentication, and then click on **Connect**
+1. Open SSMS from **Windows Start Menu**, once opened choose the Server type **Database Engine**, provide the Node1 server name, Choose the **Authentication** type Windows Authentication, and then click on **Connect**.
 
-  ![Microsoft sql server management studio](./images/msql-managementstudio.png " ")
+  ![Microsoft SQL Server Management Studio](./images/msql-managementstudio.png "Microsoft SQL Server Management Studio")
 
-2. Navigate to **Always On High Availability**, then right-click and then click on **New Availability Group Wizard**
+2. Navigate to **Always On High Availability**, then right-click and then click on **New Availability Group Wizard**.
 
-  ![Microsoft sql server always on high availability](./images/mssql-aoag-newwizard.png " ")
-3. This screen shows the **Introduction** of setup Wizard
-  ![Microsoft sql server always on high availability wizard](./images/mssql-aoag-intro.png " ")
+  ![Microsoft SQL Server Always On High Availability](./images/mssql-aoag-newwizard.png "Microsoft SQL Server Always On High Availability")
 
-4. In **Specify Options** provide the **Availability group name**, and then click on **Next**
-  ![Microsoft sql server always on high availability name](./images/mssql-aoag-name.png " ")
-5. In **Select Databases** section select the database which we need to create.
-  ![Microsoft sql server always on high availability primary DB](./images/mssql-aoag-selectdb.png " ")
-6. In **Specify Replicas**, click on **Replicas**, and then click on **Add Replica**, the setup will pop up **Connect to Server**
-  ![Microsoft sql server always on high availability read replica](./images/mssql-aoag-replica.png " ")
+3. This screen shows the **Introduction** of setup Wizard.
+
+  ![Microsoft SQL Server Always On High Availability wizard](./images/mssql-aoag-intro.png "Microsoft SQL Server Always On High Availability wizard")
+
+4. In **Specify Options** provide the **Availability group name**, and then click on **Next**.
+
+  ![Microsoft SQL Server Always On High Availability name](./images/mssql-aoag-name.png "Microsoft SQL Server Always On High Availability name")
+
+5. In **Select Databases** section select the database which you need to create.
+
+  ![Microsoft SQL Server Always On High Availability primary DB](./images/mssql-aoag-selectdb.png "Microsoft SQL Server Always On High Availability primary DB")
+
+6. In **Specify Replicas**, click on **Replicas**, and then click on **Add Replica**, the setup will pop up **Connect to Server**.
+
+  ![Microsoft SQL Server Always On High Availability read replica](./images/mssql-aoag-replica.png "Microsoft SQL Server Always On High Availability read replica")
 
 7. click on **Connect**
-  ![Microsoft sql server always on high availability read replica connect](./images/mssql-aoag-secondnodeconnect.png " ")
+  ![Microsoft SQL Server Always On High Availability read replica connect](./images/mssql-aoag-secondnodeconnect.png "Microsoft SQL Server Always On High Availability read replica connect")
 
 8. The **Replicas** screen shown as follows.
+
   ![Microsoft sql server always on high availability read replicas](./images/mssql-aoag-replica-show.png " ")
 9. In **Select Data synchronization**, and then select the **Automatic Seeding**
   ![Microsoft sql server always on high availability automatic seeding](./images/mssql-aoag-autoseeding.png " ")
@@ -173,7 +189,7 @@ Repeat all the steps from Task 2 to enable the **Always On feature for Node2**.
 
 12. The **Results** section shows **The wizard completed successfully** message as shown in the following image, and then click on **Close**
   ![Microsoft sql server always on high availability wizard results](./images/mssql-aoag-result.png " ")
-13. Open the show dashboard by right on newly created on Availability group, we can see the successfully primary and read replica as shown as following image.
+13. Open the show dashboard by right on newly created on Availability group, you can see the successfully primary and read replica as shown as following image.
   ![Microsoft sql server always on high availability dashboard](./images/mssql-aoag-dashboard.png " ")
 
 
