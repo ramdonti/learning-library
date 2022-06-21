@@ -6,7 +6,6 @@ This lab walks you through how to set up the Windows Server. This server is conf
 
 Estimated Time:  30 min
 
-
 ### Objectives
 In this lab, you will learn to :
 * Setup the Windows Server for Witness
@@ -46,7 +45,6 @@ This lab assumes you have:
 7. You can use the Remote Desktop to connect to the newly created Instance using the **opc** username and the initial password shown in the console. You need to change the password at the first login. The network that the Instance is in must allow RDP TCP port **3389** in the security list.
   ![OCI Compute Instance status](./images/compute-instance-successful.png "OCI Compute Instance status")
 
-
   You may now **proceed to the next Task**.
 
 ##  Task 2: Add the Witness Server to Active Directory Domain
@@ -76,35 +74,35 @@ This lab assumes you have:
 
   ![Windows search command](./images/windows-command-search.png "Windows search command")
 
-The Failover Cluster Manager opens as shown in the following image, and then right-click on the Cluster name, choose **More Actions**and then select the **Configure Cluster Quorum Settings**.
+3. The Failover Cluster Manager opens as shown in the following image, and then right-click on the Cluster name, choose **More Actions**and then select the **Configure Cluster Quorum Settings**.
 
   ![Configure Cluster quorum from failover Cluster manager](./images/wsfc-quorum.png "Configure Cluster quorum from failover Cluster manager")
 
-3. The configuration wizard shows as follows.
+4. The configuration wizard shows as follows.
 
   ![Cluster quorum wizard](./images/wsfc-quorum-configruation.png "Cluster quorum wizard")
 
-4. Select the **Select the Quorum Witness** option, and then click on **Next**.
+5. Select the **Select the Quorum Witness** option, and then click on **Next**.
 
   ![Cluster quorum options](./images/wsfc-quorum-configruation-select.png "Cluster quorum options")
 
-5. Select the **Configure a file share Witness**, and then click on **Next**.
+6. Select the **Configure a file share Witness**, and then click on **Next**.
 
   ![Cluster quorum file share Witness](./images/wsfc-quorum-configruation-fileshare.png "Cluster quorum file share Witness")
 
-6. Provide the path for the shared folder created in Task 3, then click on **Next**.
+7. Provide the path for the shared folder created in Task 3, then click on **Next**.
 
   ![Cluster quorum file Witness share path](./images/wsfc-quorum-sharepath.png "Cluster quorum file Witness share path")
 
-7. The configuration **Confirmation** tab shows as follows, and then click on **Next**.
+8. The configuration **Confirmation** tab shows as follows, and then click on **Next**.
 
   ![Cluster quorum Witness share path confirmation](./images/wsfc-quorum-sharepath-confirmation.png "Cluster quorum Witness share path confirmation")
 
-8. The **Summary** page shows as follows with a successful message, and then click on **Finish**.
+9. The **Summary** page shows as follows with a successful message, and then click on **Finish**.
 
   ![Cluster quorum file Witness configure status](./images/wsfc-quorum-sharepath-summary.png "Cluster quorum file Witness configure status")
 
-9. The file share Witness will be online in the Cluster Manager.
+10. The file share Witness will be online in the Cluster Manager.
 
   ![Cluster quorum Witness status](./images/wsfc-quorum-sharepath-online.png "Cluster quorum Witness status")
 

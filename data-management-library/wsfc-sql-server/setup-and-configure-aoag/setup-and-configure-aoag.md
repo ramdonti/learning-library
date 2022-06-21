@@ -6,7 +6,6 @@ This lab walks you through the steps to create the Always On Availability Group 
 
 Estimated Time:  1 hour
 
-
 ### Objectives
 In this lab, you will learn to :
 * Create Sample database creation

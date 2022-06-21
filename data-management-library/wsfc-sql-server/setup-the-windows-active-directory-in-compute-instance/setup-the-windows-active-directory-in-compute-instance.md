@@ -6,7 +6,6 @@ This lab walks you through creating a Windows bastion host and setting up the Ac
 
 Estimated Time:  1 Hour 30 min
 
-
 ### Objectives
 In this lab, you will learn to :
 * Setup the Windows bastion host

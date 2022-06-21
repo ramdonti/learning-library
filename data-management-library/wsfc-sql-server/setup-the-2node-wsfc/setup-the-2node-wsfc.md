@@ -8,7 +8,6 @@ A Failover Cluster is a group of independent computers that work together to inc
 
 Estimated Time:  1 hour
 
-
 ### Objectives
 In this lab, you will learn to :
 * How to install the Failover Clustering features on the Windows server
