@@ -5,7 +5,7 @@ This page is designed to help you solve some common problems users face in this 
 
 If you still find yourself stuck or would like to report an issue with the workshop, click the question mark icon in the upper left corner to contact the LiveLabs team directly via email.  
 
-![](images/help-button2.png)
+![help-button](images/help-button.png "help-button")
 
 For more about getting support using our email, click [here](#HowToFormatYourSupportEmailRequest).
 
