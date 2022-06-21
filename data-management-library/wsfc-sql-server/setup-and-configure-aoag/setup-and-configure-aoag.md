@@ -122,7 +122,7 @@ This lab assumes you have:
 
 7. Select the check box **Computers**, and then click on **OK**.
 
-  ![Windows AD object types select](./images/windows-dsa-serach-computer.png "Windows AD object types select")
+  ![Windows AD object types select](./images/windows-dsa-search-computer.png "Windows AD object types select")
 
 8. Search for the cluster name created in Lab 3: Task 5, then click on **OK**.
 
@@ -130,7 +130,7 @@ This lab assumes you have:
 
 9. select the cluster name and click on **Advanced**.
 
-  ![Windows cluster computer security settings](./images/windows-dsa-serach-computer-advan.png "Windows cluster computer security settings")
+  ![Windows cluster computer security settings](./images/windows-dsa-search-computer-advan.png "Windows cluster computer security settings")
 
 10. Click on **Edit** to edit the permissions.
 
@@ -138,15 +138,15 @@ This lab assumes you have:
 
 11. Choose the **Create Computer Objects** permission.
 
-  ![Windows cluster computer permissions](./images/windows-dsa-serach-computer-objects.png "Windows cluster computer permissions")
+  ![Windows cluster computer permissions](./images/windows-dsa-search-computer-objects.png "Windows cluster computer permissions")
 
 12. Click on **Apply** and click on **OK** to apply the changes.
 
-  ![Windows cluster computer permissions](./images/windows-dsa-serach-computer-apply.png "Windows cluster computer permissions")
+  ![Windows cluster computer permissions](./images/windows-dsa-search-computer-apply.png "Windows cluster computer permissions")
 
 13. Click on **Apply** and click **OK** to grant permission to the computer account.  
 
-  ![Windows cluster computer permissions apply](./images/windows-dsa-serach-computer-grant.png "Windows cluster computer permissions apply")
+  ![Windows cluster computer permissions apply](./images/windows-dsa-search-computer-grant.png "Windows cluster computer permissions apply")
 
 ##  Task 5: Configure Always On Availability Group
 
