@@ -5,16 +5,16 @@
 This hands-on workshop provides users step-by-step instructions on deploying the WSFC (Windows Server Failover Clustering) and configuring the Microsoft SQL Server Always On Availability Group setup.
 
 **Architecture:**
-This reference architecture includes a Microsoft SQL Server Always On Availability Group, bastion server, Active Directory Domain Controller, and a quorum witness host on Oracle Cloud Infrastructure.
+This reference architecture includes a Microsoft SQL Server Always On Availability Group, bastion server, Active Directory Domain Controller, and a quorum Witness host on Oracle Cloud Infrastructure.
 
 The Oracle Cloud Infrastructure region provides object storage (for backup) for the region. The region includes a single availability domain with two fault domains. 
 
 The Availability Domain provides block storage for the Availability Domain. It also contains a virtual cloud network (VCN) with four regional subnets and a service gateway. The VCN provides routing tables for each subnet, and each subnet provides its security list access.
 
 * Bastion host layer: A Bastion host resides in one fault domain. An internet gateway provides a public connection.
-* Quorum server layer: A single Quorum witness server resides in the fault domain to manage synchronization and replication to ensure that there is only one owner of a particular resource group at any given time.
+* Quorum server layer: A single Quorum Witness server resides in the fault domain to manage synchronization and replication to ensure that there is only one owner of a particular resource group at any given time.
 * Microsoft SQL Server Always On Availability Group: A primary Microsoft SQL Server database resides in one fault domain and communicates with a secondary Microsoft SQL Server database in another fault domain. 
-* Domain controller layer: A domain controller resides in a single fault domain, to which Compute Instances are attached.
+* Domain controller layer: A domain controller resides in a single fault domain to which Compute Instances are attached.
 
   ![Microsoft SQL Server AOAG - OCI](./images/2nodeaoag.png "Microsoft SQL Server AOAG - OCI")
 
