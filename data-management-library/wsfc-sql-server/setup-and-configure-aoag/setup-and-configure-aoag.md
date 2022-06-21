@@ -146,7 +146,7 @@ This lab assumes you have:
 
 13. Click on **Apply** and click **OK** to grant permission to the computer account.  
 
-  ![Windows cluster computer permissions apply](./images/windows-dsa-search-computer-grant.png "Windows cluster computer permissions apply")
+  ![Windows cluster computer permissions apply](./images/windows-dsa-serach-computer-grant.png "Windows cluster computer permissions apply")
 
 ##  Task 5: Configure Always On Availability Group
 
