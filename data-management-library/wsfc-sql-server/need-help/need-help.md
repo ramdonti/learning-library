@@ -16,14 +16,13 @@ When you are finished please don't forget to rate this workshop!  We rely on thi
 
 2.  Click on the **Brown Button** to re-access the workshop  
 
-    ![](images/workshop-homepage-2.png " ")
+    ![Workshop homepage](images/workshop-homepage-2.png "Workshop homepage")
 
 3.  Click **Rate this workshop**
 
-    ![](images/rate-this-workshop.png " ")
+    ![Rate this workshop](images/rate-this-workshop.png "Rate this workshop")
 
 If you still have an active reservation, you can also rate by going to **My Reservations** -> **Launch Workshop**.
-
 
 ## How to Format Your Support Email Request
 This will construct an email in your default mail application that is auto populated to address our LiveLabs support inbox and will also include your current workshop in the subject line. Follow the steps below to contact us and get a quick resolution to your issue.
@@ -31,7 +30,7 @@ This will construct an email in your default mail application that is auto popul
 1. Do not change the subject line.
 2. Include the description of your issue and any pertinent information in the contents on your email.
 
-    ![](images/e-mail.png)
+    ![e-mail](images/e-mail.png "e-mail")
 
 3. Include the **Lab Number**, **Step Number**, and **Sub-Step Number** where you've encounter the issue.
 4. Attach a **Screenshot** and **Any Troubleshooting Steps** you've tried so we can recreate the issue and provide a timely and accurate solution.
