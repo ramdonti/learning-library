@@ -1,16 +1,16 @@
-# Setup Windows witness server for windows server failover cluster
+# Setup Windows Witness server for Windows Server Failover Cluster
 
 ## Introduction
 
-This lab walks you through how to set up the Windows Server. This server is configured as the witness server for the Cluster.  
+This lab walks you through how to set up the Windows Server. This server is configured as the Witness server for the Cluster.  
 
 Estimated Time:  30 min
 
 
 ### Objectives
 In this lab, you will learn to :
-* Setup the Windows Server for witness
-* Configure the witness for the Windows Server Failover Cluster.
+* Setup the Windows Server for Witness
+* Configure the Witness for the Windows Server Failover Cluster.
 
 ### Prerequisites  
 
@@ -19,7 +19,7 @@ This lab assumes you have:
 - IAM policies to create resources in the compartment
 - Required Subnets are available in VCN
 
-##  Task 1: Create the witness server in Private Subnet
+##  Task 1: Create the Witness server in Private Subnet
 
 1. Open the navigation menu, click **Compute**, and then click **Instances**.
 
@@ -49,15 +49,15 @@ This lab assumes you have:
 
   You may now **proceed to the next Task**.
 
-##  Task 2: Add the witness Server to Active Directory Domain
+##  Task 2: Add the Witness Server to Active Directory Domain
 
   * Repeat steps from Lab 2: Task 3 to add the server to Active Directory Domain.
 
-##  Task 3: Configure the witness for the Windows Server Failover Cluster
+##  Task 3: Configure the Witness for the Windows Server Failover Cluster
 
 1. RDP to the Bastion host server using the username **opc** and password. From the Bastion host, open the Remote Desktop and connect to the witness server using the private IP Address.
 
-2. Create a folder name as a witness and share the folder for read and write, and then click on Share folder
+2. Create a folder name as a Witness and share the folder for read and write, and then click on Share folder
 
   ![Windows Share folder](./images/windows-sharefolder.png "Windows Share folder")
 
@@ -68,7 +68,7 @@ This lab assumes you have:
 3. The successful share folder shows as follows.
   ![Windows Share folder network access](./images/windows-sharefolder-successful.png "Windows Share folder network access")
 
-##  Task 4: Configure the witness in the Windows Server Failover Cluster
+##  Task 4: Configure the Witness in the Windows Server Failover Cluster
 
 1. RDP to the Bastion host server using the username **opc** and password. From the Bastion host, open the Remote Desktop and connect to the Node1 or node2 server using the private IP Address.
 
@@ -88,25 +88,25 @@ The Failover Cluster Manager opens as shown in the following image, and then rig
 
   ![Cluster quorum options](./images/wsfc-quorum-configruation-select.png "Cluster quorum options")
 
-5. Select the **Configure a file share witness**, and then click on **Next**.
+5. Select the **Configure a file share Witness**, and then click on **Next**.
 
-  ![Cluster quorum file share witness](./images/wsfc-quorum-configruation-fileshare.png "Cluster quorum file share witness")
+  ![Cluster quorum file share Witness](./images/wsfc-quorum-configruation-fileshare.png "Cluster quorum file share Witness")
 
 6. Provide the path for the shared folder created in Task 3, then click on **Next**.
 
-  ![Cluster quorum file witness share path](./images/wsfc-quorum-sharepath.png "Cluster quorum file witness share path")
+  ![Cluster quorum file Witness share path](./images/wsfc-quorum-sharepath.png "Cluster quorum file Witness share path")
 
 7. The configuration **Confirmation** tab shows as follows, and then click on **Next**.
 
-  ![Cluster quorum witness share path confirmation](./images/wsfc-quorum-sharepath-confirmation.png "Cluster quorum witness share path confirmation")
+  ![Cluster quorum Witness share path confirmation](./images/wsfc-quorum-sharepath-confirmation.png "Cluster quorum Witness share path confirmation")
 
 8. The **Summary** page shows as follows with a successful message, and then click on **Finish**.
 
-  ![Cluster quorum file witness configure status](./images/wsfc-quorum-sharepath-summary.png "Cluster quorum file witness configure status")
+  ![Cluster quorum file Witness configure status](./images/wsfc-quorum-sharepath-summary.png "Cluster quorum file Witness configure status")
 
-9. The file share witness will be online in the Cluster Manager.
+9. The file share Witness will be online in the Cluster Manager.
 
-  ![Cluster quorum witness status](./images/wsfc-quorum-sharepath-online.png "Cluster quorum witness status")
+  ![Cluster quorum Witness status](./images/wsfc-quorum-sharepath-online.png "Cluster quorum Witness status")
 
     Congratulations !!! You Have Completed Successfully The Workshop.
 
