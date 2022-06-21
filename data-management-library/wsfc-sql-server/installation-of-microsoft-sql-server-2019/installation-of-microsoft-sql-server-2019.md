@@ -46,7 +46,7 @@ This lab assumes you have:
 
   ![OCI Compute Instance VCN](./images/compute-instance-compart.png "OCI Compute Instance VCN")
 
-7. Choose the default values and click on the **Create** instance.
+7. Choose the default values and click on the **Create** Instance.
 
   ![OCI Compute Instance boot volume](./images/compute-instance-default.png "OCI Compute Instance boot volume")
 

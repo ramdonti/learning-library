@@ -10,7 +10,7 @@ Estimated Time:  30 min
 ### Objectives
 In this lab, you will learn to :
 * Setup the Windows Server for Witness
-* Configure the Witness for the Windows Server Failover Cluster.
+* Configure the Witness for the Windows Server Failover Cluster
 
 ### Prerequisites  
 
@@ -41,7 +41,7 @@ This lab assumes you have:
 
   ![OCI Compute Instance VCN](./images/compute-instance-ip.png "OCI Compute Instance VCN")
 
-6. Choose the default values and click on **Create** Instance
+6. Choose the default values and click on **Create** Instance.
 
 7. You can use the Remote Desktop to connect to the newly created Instance using the **opc** username and the initial password shown in the console. You need to change the password at the first login. The network that the Instance is in must allow RDP TCP port **3389** in the security list.
   ![OCI Compute Instance status](./images/compute-instance-successful.png "OCI Compute Instance status")
@@ -57,7 +57,7 @@ This lab assumes you have:
 
 1. RDP to the Bastion host server using the username **opc** and password. From the Bastion host, open the Remote Desktop and connect to the witness server using the private IP Address.
 
-2. Create a folder name as a Witness and share the folder for read and write, and then click on Share folder
+2. Create a folder name as a Witness and share the folder for read and write, and then click on Share folder.
 
   ![Windows Share folder](./images/windows-sharefolder.png "Windows Share folder")
 
@@ -80,7 +80,7 @@ The Failover Cluster Manager opens as shown in the following image, and then rig
 
   ![Configure Cluster quorum from failover Cluster manager](./images/wsfc-quorum.png "Configure Cluster quorum from failover Cluster manager")
 
-3. The configuration wizard shows as follows:
+3. The configuration wizard shows as follows.
 
   ![Cluster quorum wizard](./images/wsfc-quorum-configruation.png "Cluster quorum wizard")
 

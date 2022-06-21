@@ -37,11 +37,11 @@ This lab assumes you have:
 
   ![Server manager roles and features](./images/windows-servermanager-begin.png "Server manager roles and features")
 
-5. Choose the Installation Type **Role-based or feature-based Installation**, click on **Next**
+5. Choose the Installation Type **Role-based or feature-based Installation**, click on **Next**.
 
   ![Server manager installation type](./images/windows-servermanager-installtype.png "Server manager installation type")
 
-6. Choose the Server Selection Type **Select a server from the server pool**, click on **Next**
+6. Choose the Server Selection Type **Select a server from the server pool**, click on **Next**.
 
   ![Server manager server pool](./images/windows-servermanager-serverselection.png "Server manager server pool")
 
@@ -61,7 +61,7 @@ This lab assumes you have:
 
   ![Server manager features Failover Clustering installation results](./images/windows-servermanager-results.png "Server manager features Failover Clustering installation results")
 
-10. To verify the Failover Cluster services, From the taskbar, click the **search button** and search for **Failover Cluster**
+10. To verify the Failover Cluster services, From the taskbar, click the **search button** and search for **Failover Cluster**.
 
   ![Windows command search Failover Cluster manager](./images/windows-command-fcm.png "Windows command search Failover Cluster manager")
 
@@ -93,7 +93,7 @@ This lab assumes you have:
 
   ![OCI Compute Instance attached VNICs IP](./images/compute-instance-ipv.png "OCI Compute Instance attached VNICs IP")
 
-5. The **IPv4 Address** show the Primary IP address details, and then click on **Assign Secondary Private IP Address**
+5. The **IPv4 Address** show the Primary IP address details, and then click on **Assign Secondary Private IP Address**.
 
   ![OCI Compute Instance attached VNICs secondary IP](./images/compute-instance-ipv-secondary.png "OCI Compute Instance attached VNICs secondary IP")
 
@@ -107,13 +107,13 @@ This lab assumes you have:
 
 ## Task 4: Create Secondary Private IPs for Node2
 
-* Repeat the all steps from **Task 3** to add secondary IPs for Node2 VNICS
+* Repeat the all steps from **Task 3** to add secondary IPs for Node2 VNICS.
 
 ## Task 5:  Configure the two-node Windows Failover Cluster
 
 1. RDP to the Bastion host server using the username **use the testadmin user created in lab 1, Task 2 in step 35** and password, from the Bastion host, open the Remote Desktop and connect to the Node1 server using the private IP Address.
 
-2. From the taskbar, click the **search button** and search for **Failover Cluster**
+2. From the taskbar, click the **search button** and search for **Failover Cluster**.
 
   ![Windows search command](./images/windows-command-search.png "Windows search command")
 
@@ -166,6 +166,7 @@ This lab assumes you have:
   ![Windows cluster name conformation](./images/windows-fcm-clustername.png "Windows cluster name conformation")
 
 14. Once the Cluster is configured, you can see the confirmation that **You have completed the Create Cluster Wizard** message as shown follows.
+
   ![Windows cluster creation results](./images/windows-fcm-successful.png "Windows cluster creation results")
 
 15. The cluster details are shown below after successfully creating the Cluster.

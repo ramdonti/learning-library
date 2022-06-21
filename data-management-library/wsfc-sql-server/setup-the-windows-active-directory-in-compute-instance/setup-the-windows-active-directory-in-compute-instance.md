@@ -29,7 +29,7 @@ This lab assumes you have:
 
   ![OCI Compute Instance create Instance](./images/create-instance.png "OCI Compute Instance create Instance")
 
-3. Choose the Instance name and compartment where the compute Instance needs to create and select the desired Availability Domain.
+3. Choose the Instance name and compartment where the Compute Instance needs to create and select the desired Availability Domain.
 
   ![OCI Compute instance name](./images/create-instance-name.png "OCI Compute instance name")
 
@@ -41,7 +41,7 @@ This lab assumes you have:
 
   ![OCI Compute Instance VCN](./images/create-instance-comp.png "OCI Compute Instance VCN")
 
-6. Choose the default values and click on the **Create** instance.
+6. Choose the default values and click on the **Create** Instance.
 
   ![OCI create Compute Instance](./images/create-instance-bootvolume.png "OCI create Compute Instance")
 
@@ -49,7 +49,7 @@ This lab assumes you have:
 
   ![OCI create Compute Instance](./images/create-instance-provisioning.png "OCI create Compute Instance")
 
-8. Once the Compute Instance is provisioned successfully, the instance state will be running state.
+8. Once the Compute Instance is provisioned successfully, the Instance state will be running state.
 
   ![OCI Compute Instance status](./images/create-instance-running.png "OCI Compute Instance status")
 
@@ -81,11 +81,11 @@ This lab assumes you have:
 
   ![OCI Compute Instance VCN](./images/create-instance-comp-msdc.png "OCI Compute Instance VCN")
 
-6. Choose the default values and click on Create instance.
+6. Choose the default values and click on Create Instance.
 
   ![OCI create Compute Instance](./images/create-instance-bootvolume.png "OCI create Compute Instance")
 
-7. The Compute instance will be in a provisioning state shown in the below image.
+7. The Compute Instance will be in a provisioning state shown in the below image.
 
   ![OCI Compute Instance status](./images/create-instance-provisioning-msdc.png "OCI Compute Instance status")
 

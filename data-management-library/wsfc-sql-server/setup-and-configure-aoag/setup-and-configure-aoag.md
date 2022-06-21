@@ -182,15 +182,15 @@ This lab assumes you have:
 
   ![Microsoft sql server always on high availability read replicas](./images/mssql-aoag-replica-show.png " ")
 
-9. In **Select Data synchronization**, and then select the **Automatic Seeding**
+9. In **Select Data synchronization**, and then select the **Automatic Seeding**.
 
   ![Microsoft sql server always on high availability automatic seeding](./images/mssql-aoag-autoseeding.png " ")
 
-10. The **Validation** screen shown as follows
+10. The **Validation** screen shown as follows.
 
   ![Microsoft sql server always on high availability validation](./images/mssql-aoag-validation.png " ")
 
-11. The **Summary** screen shows as follows
+11. The **Summary** screen shows as follows.
 
   ![Microsoft sql server always on high availability Summary](./images/mssql-aoag-summary.png " ")
 
