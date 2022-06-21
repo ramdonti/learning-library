@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This lab walks you through the steps of how to create a Windows bastion host and set up the Windows Active Directory Domain Services in a Compute instance. It involves creating the Windows bastion host and Windows server in a Compute instance and installing and configuring the Microsoft Active Directory Domain Services.
+This lab walks you through creating a Windows bastion host and setting up the Active Directory Domain Services in a Compute Instance. It involves creating the Windows bastion host and Windows server in a Compute Instance and installing and configuring the Microsoft Active Directory Domain Services.
 
 Estimated Time:  1 Hour 30 min
 
@@ -10,7 +10,7 @@ Estimated Time:  1 Hour 30 min
 ### Objectives
 In this lab, you will learn to :
 * Setup the Windows bastion host
-* Setup the Windows Active Directory Domain Services in Compute instance
+* Setup the Windows Active Directory Domain Services in Compute Instance
 
 ### Prerequisites  
 
@@ -23,39 +23,39 @@ This lab assumes you have:
 
 1. Open the navigation menu, click **Compute**, and then click **Instances**.
 
-  ![OCI compute instance](./images/create-instance-oci.png "OCI compute instance")
+  ![OCI Compute Instance](./images/create-instance-oci.png "OCI Compute Instance")
 
-2. Compute page will be shown below. The Compute service helps you provision VMs and bare metal instances to meet your compute and application requirements.  Navigate to **Instances**, and then click on **Create Instance**.
+2. Compute will show the page below. The Compute service helps you provision VMs and bare metal Instances to meet your compute and application requirements. Navigate to **Instances**, and then click on **Create Instance**.
 
-  ![OCI compute instance create instance](./images/create-instance.png "OCI compute instance create instance")
+  ![OCI Compute Instance create Instance](./images/create-instance.png "OCI Compute Instance create Instance")
 
-3. Choose the Instance name and compartment where the compute instance needs to create and select the desired Availability Domain.
+3. Choose the Instance name and compartment where the compute Instance needs to create and select the desired Availability Domain.
 
-  ![OCI compute instance name](./images/create-instance-name.png "OCI compute instance name")
+  ![OCI Compute instance name](./images/create-instance-name.png "OCI Compute instance name")
 
-4. Click on **Change image** to select the edition of Windows image build and Click on **Change shape** to select the shape of the instance.
+4. Click on **Change image** to select the edition of Windows image build and Click on **Change Shape** to choose the Shape of the Instance.
 
-  ![OCI compute instance shape select](./images/create-instance-shape.png "OCI compute instance shape select")
+  ![OCI Compute instance shape select](./images/create-instance-shape.png "OCI Compute instance shape select")
 
-5. Choose the compartment where the compute instance should reside and then choose the public subnet as shown in the below image. Click on assign a public IPv4 address to connect from the public internet.
+5. Choose the compartment where the Compute Instance should reside and then choose the public subnet as shown below. Click on assign a public IPv4 address to connect from the public internet.
 
-  ![OCI compute instance VCN](./images/create-instance-comp.png "OCI compute instance VCN")
+  ![OCI Compute Instance VCN](./images/create-instance-comp.png "OCI Compute Instance VCN")
 
 6. Choose the default values and click on the **Create** instance.
 
-  ![OCI create compute instance](./images/create-instance-bootvolume.png "OCI create compute instance")
+  ![OCI create Compute Instance](./images/create-instance-bootvolume.png "OCI create Compute Instance")
 
-7. The Compute instance will be in a provisioning state shown in the below image.
+7. The Compute Instance will be in a provisioning state shown in the below image.
 
-  ![OCI create compute instance](./images/create-instance-provisioning.png "OCI create compute instance")
+  ![OCI create Compute Instance](./images/create-instance-provisioning.png "OCI create Compute Instance")
 
-8. Once the compute instance is provisioned successfully, the instance state will be running state.
+8. Once the Compute Instance is provisioned successfully, the instance state will be running state.
 
-  ![OCI compute instance status](./images/create-instance-running.png "OCI compute instance status")
+  ![OCI Compute Instance status](./images/create-instance-running.png "OCI Compute Instance status")
 
-9. You can connect to the newly created instance via Remote Desktop using the **opc** username and the initial password shown in the console; the user must change the password at the next logon. The compute instance must allow RDP TCP port **3389** in the security list.
+9. You can connect to the newly created Instance via Remote Desktop using the **opc** username and the initial password shown in the console; the user must change the password at the next logon. The Compute Instance must allow RDP TCP port **3389** in the security list.
 
-  ![OCI compute instance RDP username](./images/create-instance-userdetails.png "OCI compute instance RDP username")
+  ![OCI Compute Instance RDP username](./images/create-instance-userdetails.png "OCI Compute Instance RDP username")
 
   You may now **proceed to the next Task**.
 
@@ -63,52 +63,52 @@ This lab assumes you have:
 
 1. Open the navigation menu, click on **Compute**, and then click **Instances**.
 
-  ![OCI compute instance](./images/create-instance-oci.png "OCI compute instance")
+  ![OCI Compute Instance](./images/create-instance-oci.png "OCI Compute Instance")
 
 2. Navigate to **Instances**, and then click on **Create Instance**.
 
-  ![OCI compute instance create instance](./images/create-instance.png "OCI compute instance create instance")
+  ![OCI Compute Instance create Instance](./images/create-instance.png "OCI Compute Instance create instance")
 
-3. Choose the Instance name and compartment where the compute instance needs to be created and select the desired Availability Domain.
+3. Choose the Instance name and compartment where the Compute Instance needs to be created and select the desired Availability Domain.
 
-  ![OCI compute instance name](./images/create-instance-name-msdc.png "OCI compute instance name")
+  ![OCI Compute Instance name](./images/create-instance-name-msdc.png "OCI Compute Instance name")
 
 4. Click on **Change image** to select the required Windows image and click on **Change shape** to select the instance shape.
 
-  ![OCI compute instance shape select](./images/create-instance-shape.png "OCI compute instance shape select")
+  ![OCI Compute Instance shape select](./images/create-instance-shape.png "OCI Compute Instance shape select")
 
-5. Choose the compartment where the compute instance resides, and then choose the private subnet as shown in the below image. Since we have chosen a private subnet, the public IP address is selected as Do not assign a public IPv4 address automatically.
+5. Choose the compartment where the Compute Instance resides, then choose the private subnet as shown below. Since we have chosen a private subnet, the public IP address is selected as Do not assign a public IPv4 address automatically.
 
-  ![OCI compute instance VCN](./images/create-instance-comp-msdc.png "OCI compute instance VCN")
+  ![OCI Compute Instance VCN](./images/create-instance-comp-msdc.png "OCI Compute Instance VCN")
 
 6. Choose the default values and click on Create instance.
 
-  ![OCI create compute instance](./images/create-instance-bootvolume.png "OCI create compute instance")
+  ![OCI create Compute Instance](./images/create-instance-bootvolume.png "OCI create Compute Instance")
 
 7. The Compute instance will be in a provisioning state shown in the below image.
 
-  ![OCI compute instance status](./images/create-instance-provisioning-msdc.png "OCI compute instance status")
+  ![OCI Compute Instance status](./images/create-instance-provisioning-msdc.png "OCI Compute Instance status")
 
-8. Once the compute instance provisioning is completed, you will be able to see the instance state is running.
+8. Once the Compute Instance provisioning is completed, you will be able to see the Instance state is running.
 
-  ![OCI compute instance status](./images/create-instance-running-msdc.png "OCI compute instance status")
+  ![OCI Compute Instance status](./images/create-instance-running-msdc.png "OCI Compute Instance status")
 
-9. You can connect to the newly created instance via Remote Desktop using the **opc** username and the initial password shown in the console; the user must change the password at the next logon. The compute instance must allow RDP TCP port **3389** in the security list.
+9. You can connect to the newly created Instance via Remote Desktop using the **opc** username and the initial password shown in the console; the user must change the password at the next logon. The Compute Instance must allow RDP TCP port **3389** in the security list.
 
-  ![OCI compute instance RDP username](./images/create-instance-userdetails-msdc.png "OCI compute instance RDP username")
+  ![OCI Compute Instance RDP username](./images/create-instance-userdetails-msdc.png "OCI Compute Instance RDP username")
 
 10. From the Bastion host server using the username **opc** and password, open the Remote Desktop and connect to the Domain Controller server using the private IP address.
 
-11. From the taskbar, click **search button** and search for "run". Once the run command opens, type **lusrmgr.msc** to open the local users.
+11. From the taskbar, click the **search button** and search for **run**. Once the run command opens, type **lusrmgr.msc** to open the local users.
 
   ![Windows run command](./images/windows-run-command.png "Windows run command")
 
-12. Once open, click on "Local Users and Groups". Click on **Users** and right-click on **Administrator** to set the password. The password reset is needed to run successful  **Prerequisites**  during the domain creation.
+12. Once open, click on **Local Users and Group**. Click on **Users** and right-click on **Administrator** to set the password. The password reset is needed to run successful  **Prerequisites**  during the Domain creation.
 
   ![Windows local users and groups wizard](./images/windows-command-lusrmgr.png "Windows local users and groups wizard")
   ![Windows local users and groups Administrator password reset](./images/windows-user-pass-reset.png "Windows local users and groups Administrator password reset")
 
-13. From the task-bar click **search button** and search for Server Manager and click on Server Manager.
+13. From the taskbar, click the **search button**, search for Server Manager, and click on Server Manager.
 
   ![Windows server manager search](./images/windows-command-search.png "Windows server manager search")
 
@@ -116,7 +116,7 @@ This lab assumes you have:
 
   ![Windows server manager add roles and features](./images/windows-servermanager-addrole.png "Windows server manager add roles and features")
 
-15. The Add Roles and Features Wizard look like the following image, and then click on **Next**.
+15. The Add Roles and Features Wizard look like the following image and then click on **Next**.
 
   ![Windows server manager add roles and features wizard](./images/windows-servermanager-begin.png "Windows server manager add roles and features wizard")
 
@@ -130,7 +130,7 @@ This lab assumes you have:
 
 18. Choose the Server Roles **Active Directory Domain Services**, click on **Add Features**, and then click on **Next**.
 
-  ![Windows server manager server roles selection](./images/windows-servermanager-serverroles.png "Windows server manager server roles selection")
+  ![Windows server manager roles selection](./images/windows-servermanager-serverroles.png "Windows server manager roles selection")
 
 19. Select the features **Telnet Client**, which will be required to perform the ping test, and then click **next**.
 
@@ -148,31 +148,31 @@ This lab assumes you have:
 
     ![Windows server manager progress results](./images/windows-servermanager-results.png "Windows server manager progress results")
 
-23. Click the **search button** in the taskbar, search for "Server Manager," and click on "Server Manager." Click on the flag and click on **Promote the server to a domain controller**.
+23. Click the **search button** in the taskbar, search for "Server Manager," and click on "Server Manager." Click on the flag and click on **Promote the server to a Domain Controller**.
 
-    ![Windows server manager promote the server to a domain controller](./images/windows-servermanager-prompt.png "Windows server manager promote the server to a domain controller")
+    ![Windows server manager promotes the server to a Domain Controller](./images/windows-servermanager-prompt.png "Windows server manager promotes the server to a Domain Controller")
 
-24. From the **Deployment Configuration**, select **Add a new forest** and provide the desired domain name in **Root domain name:**, click on **Next**.
+24. From the **Deployment Configuration**, select **Add a new forest** and provide the desired Domain name in **Root Domain name:**, click on **Next**.
 
     ![Windows AD deployment configuration](./images/windows-servermanager-addnew.png "Windows AD deployment configuration")
 
 25. In the **Domain Controller Options**, enter the **DSRM** password and click **Next**.
 
-    ![Windows domain controller options](./images/windows-servermanager-dsrm.png "Windows domain controller options")
+    ![Windows Domain Controller options](./images/windows-servermanager-dsrm.png "Windows Domain Controller options")
 
 26. In the **DNS Options**, ignore the warning and click on **Next**.
 
     ![Windows DNS options](./images/windows-servermanager-dnsoptions.png "Windows DNS options")
 
-27. The **NetBIOS domain name:** will resolve automatically, click on **Next**.
+27. The **NetBIOS Domain name:** will resolve automatically. Click on **Next**.
 
     ![Windows AD additional options](./images/windows-servermanager-netbios.png "Windows AD additional options")
 
-28. choose the required paths for log files, click on **Next**.
+28. choose the required paths for log files, and click on **Next**.
 
     ![Windows AD log location](./images/windows-servermanager-logpath.png "Windows AD log location")
 
-29. In the **Review Options** we can see the details settings, click on **Next**.
+29. In the **Review Options**, you can see the details settings. Click on **Next**.
 
     ![Windows AD review configuration](./images/windows-servermanager-reviewoptions.png "Windows AD review configuration")
 
@@ -180,11 +180,11 @@ This lab assumes you have:
 
     ![Windows AD prerequisites](./images/windows-servermanager-prerequisites.png "Windows AD prerequisites")
 
-31. Once the server is configured with the domain controller, the system will be automatically restarted.
+31. Once the server is configured with the Domain Controller, the system will automatically restart.
 
     ![Windows AD success](./images/windows-servermanager-dc.png "Windows AD success")
 
-32. To verify the domain details, click the search button on the taskbar and type **dsa.msc** into the run command to open the Active Directory users and computers.
+32. To verify the Domain details, click the search button on the taskbar and type **dsa.msc** into the run command to open the Active Directory users and computers.
 
     ![Windows AD users and computers](./images/windows-command-dsa.png "Windows AD users and computers")
 
@@ -194,11 +194,11 @@ This lab assumes you have:
 
 34. In the **Customize settings**and choose the **Turn off Windows Firewall**, and then click on **OK** to apply the changes.
 
-    ![Windows turn off firewall](./images/windows-firewall-customsettings.png "Windows turn off firewall")
+    ![Windows turn off Firewall](./images/windows-firewall-customsettings.png "Windows turn off Firewall")
 
-35. To create domain Administrator users, go to the taskbar and search for the run command; once the run command opens, type **dsa.msc** to open the Active Directory users and computers, and then click on **users**.
+35. To create Domain Administrator users, go to the taskbar and search for the run command; once the run command opens, type **dsa.msc** to open the Active Directory users and computers, then click on **users**.
 
-    ![Create domain user](./images/windows-create-ad-account.png "Create domain user")
+    ![Create Domain user](./images/windows-create-ad-account.png "Create Domain user")
 
 36. Provide the username details, and then click on **Next**.
 
@@ -208,13 +208,13 @@ This lab assumes you have:
 
     ![Domain user password](./images/windows-create-ad-password.png "Domain user password")
 
-38. Click on **Finish** to create the domain user.
+38. Click on **Finish** to create the Domain user.
 
     ![Domain user successful creation](./images/windows-create-ad-finish.png "Domain user successful creation")
 
-39. Double click on the newly created user and click on **Member of**, and then add the **Domain Admins** and click on **Apply** to add the **Domain Admins** to the newly created user.
+39. Double click on the newly created user, click on **Member of**, and then add the **Domain Admins** and click on **Apply** to add the **Domain Admins** to the newly created user.
 
-    ![Granting domain admins to users](./images/windows-create-ad-user-memberof.png "Granting domain admins to users")
+    ![Granting Domain admins to users](./images/windows-create-ad-user-memberof.png "Granting Domain admins to users")
 
     You may now **proceed to the next lab**.
 

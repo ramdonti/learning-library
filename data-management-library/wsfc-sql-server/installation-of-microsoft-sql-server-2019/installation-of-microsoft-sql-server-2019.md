@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This lab demonstrates how to provision Microsoft SQL Server 2019 from the Market Place Image in a compute instance.
+This lab demonstrates how to provision Microsoft SQL Server 2019 from the Market Place Image in a Compute Instance.
 
 Estimated Time:  1 hour
 
@@ -24,35 +24,35 @@ This lab assumes you have:
 
   ![OCI Marketplace](./images/compute-instance-oci.png "OCI Marketplace")
 
-2. Marketplace **All Applications** will be shown below. Search for **SQL Server 2019** image and select the desired edition for SQL Server. The marketplace image is available in Enterprise and Standard Edition. Always On Basic Availability Groups provide a high availability solution for SQL Server from version 2016 and above on Standard Edition. An availability group supports a failover environment for a single database in Standard Edition.
+2. Marketplace **All Applications** will be shown below. Search for **SQL Server 2019** image and select the desired edition for SQL Server. The marketplace image is available in Enterprise and Standard Edition. Always On Basic Availability Groups provide a high availability solution for SQL Server from version 2016 and above on Standard Edition. An Availability Group supports a failover environment for a single database in Standard Edition.
 
   ![Search SQL server](./images/compute-instance-marketplace.png "Search SQL server")
 
-3. Choose the compartment and click on **Launch Instance**. The screen will be taken to the launch compute instance.
+3. Choose the compartment and click on **Launch Instance**. The screen will be taken to the launch Compute Instance.
 
-  ![OCI launch instance](./images/compute-instance-compartment.png "OCI launch instance")
+  ![OCI launch Instance](./images/compute-instance-compartment.png "OCI launch Instance")
 
 > **Note: You will be charged a minimum of 744 hours for the MS SQL Server Marketplace image.
 
-4. Choose the instance name and compartment, and select the desired Availability Domain.
+4. Choose the Instance name and compartment, and select the desired Availability Domain.
 
-  ![OCI create compute instance](./images/compute-instance-ad.png "OCI create compute instance")
+  ![OCI create Compute Instance](./images/compute-instance-ad.png "OCI create Compute Instance")
 
-5. Click on **Change shape** to select the shape of the instance.
+5. Click on **Change Shape** to select the shape of the Instance.
 
-  ![OCI compute instance shape](./images/compute-instance-shape.png "OCI compute instance shape")
+  ![OCI Compute Instance shape](./images/compute-instance-shape.png "OCI Compute Instance shape")
 
-6. Choose the compartment where the compute instance should reside, and then choose the private subnet as shown below the image.
+6. Choose the compartment where the Compute Instance should reside, and then choose the private subnet as shown below the image.
 
-  ![OCI compute instance VCN](./images/compute-instance-compart.png "OCI compute instance VCN")
+  ![OCI Compute Instance VCN](./images/compute-instance-compart.png "OCI Compute Instance VCN")
 
-7. Choose the default values and click on **Create** instance.
+7. Choose the default values and click on the **Create** instance.
 
-  ![OCI compute instance boot volume](./images/compute-instance-default.png "OCI compute instance boot volume")
+  ![OCI Compute Instance boot volume](./images/compute-instance-default.png "OCI Compute Instance boot volume")
 
-8. Once the compute instance provisioning is completed, you will be able to see the instance state is running.
+8. Once the Compute Instance provisioning is completed, you will be able to see the Instance state is running.
 
-  ![OCI compute instance status](./images/compute-instance-provision.png "OCI compute instance status")
+  ![OCI Compute Instance status](./images/compute-instance-provision.png "OCI Compute Instance status")
 
 ##  Task 2: Provision the SQL Server 2019 from Market Place for Node2
 
@@ -62,33 +62,33 @@ This lab assumes you have:
 
 1. RDP to the bastion host and login to the Node1 server using the private IP.
 
-2. Open **Control Panel**, and navigate to **Network and Internet\Network and Sharing Center**.
+2. Open **Control Panel**and navigate to **Network and Internet\Network and Sharing Center**.
 
   ![Windows network and sharing center](./images/windows-controlpanel.png "Windows network and sharing center")
 
-3. Click on **Ethernet** connection, and then click on **properties**.
+3. Click on **Ethernet** connection, then click on **properties**.
 
   ![network and sharing ethernet properties](./images/windows-network-ethernet.png " ")
-4. Click on **IPv4**, and then click on **properties**. Choose the ****Use the following DNS Server Addresses:** and enter the private IP address of the domain you created in Lab1, then click **OK** to save the changes.
+4. Click on **IPv4**, and then click on **properties**. Choose the ****Use the following DNS Server Addresses:** and enter the private IP address of the Domain you created in Lab1, then click **OK** to save the changes.
 
   ![Ethernet IP addresses](./images/windows-network-ip.png "Ethernet IP addresses")
 
-5. Open the File Explorer and right-click on **This PC**, and then click on **properties**.
+5. Open the File Explorer, right-click on **This PC**, and then click on **properties**.
   ![Windows system properties](./images/windows-network-properties.png "Windows system properties")
 
 6. The following popup will be opened, and click on **Change Settings**.
 
   ![Windows system change settings](./images/windows-network-changesettings.png " ")
 
-7. Click on **Computer Name**, and then click on **Change**.  Choose **Domain** and enter the domain name, then click **OK** to save the changes.
+7. Click on **Computer Name**, and then click on **Change**. Choose **Domain** and enter the domain name, then click **OK** to save the changes.
 
   ![Windows system name change](./images/windows-network-changedomain.png "Windows system name change")
 
-8. The system will prompt for the domain administrator **username** and **password**. Provide the **domainname\username** and **password**, and then click on **ok** to apply the changes.
+8. The system will prompt for the domain administrator **username** and **password**. Provide the **domainname\username**and **password**, and then click on **OK** to apply the changes.
 
   ![Domain credentials](./images/windows-network-changepass.png "Domain credentials")
 
-9. On successfully adding the server to the domain, you can see the successful message as shown below.
+9. On successfully adding the server to the Domain, you can see the successful message shown below.
 
   ![Change in computer name](./images/windows-network-successful.png "Change in computer name")
 

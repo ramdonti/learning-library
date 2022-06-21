@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This lab walks you through the steps of how to set up the Windows Server, this server will be used as the witness server for the cluster.  
+This lab walks you through how to set up the Windows Server. This server is configured as the witness server for the Cluster.  
 
 Estimated Time:  30 min
 
@@ -23,28 +23,28 @@ This lab assumes you have:
 
 1. Open the navigation menu, click **Compute**, and then click **Instances**.
 
-  ![OCI compute instance](./images/compute-instance-oci.png "OCI compute instance")
+  ![OCI Compute Instance](./images/compute-instance-oci.png "OCI Compute Instance")
 
-2. Compute page will be shown below. The Compute service helps you provision VMs and bare metal instances to meet your compute and application requirements.  Navigate to **Instances**, and then click on **Create Instance**.
+2. Compute will show the page below. The Compute service helps you provision VMs and bare metal instances to meet your compute and application requirements. Navigate to **Instances**, and then click on **Create Instance**.
 
-  ![OCI create compute instance](./images/compute-instance-create.png "OCI create compute instance")
+  ![OCI create Compute Instance](./images/compute-instance-create.png "OCI create Compute Instance")
 
-3. Choose the Instance name and compartment where the compute instance needs to be created, and select the desired Availability Domain.
+3. Choose the Instance name and compartment where the Compute Instance needs to be created, and select the desired Availability Domain.
 
-  ![OCI compute instance name](./images/compute-instance-name.png "OCI compute instance name")
+  ![OCI Compute Instance name](./images/compute-instance-name.png "OCI Compute Instance name")
 
-4. Click on **Change image** to select the edition of Windows image build and Click on **Change shape** to select the shape of the instance.
+4. Click on **Change image** to select the edition of Windows image build and Click on **Change shape** to choose the shape of the Instance.
 
-  ![OCI compute instance shape](./images/compute-instance-shape.png "OCI compute instance shape")
+  ![OCI Compute Instance shape](./images/compute-instance-shape.png "OCI Compute Instance shape")
 
-5. Choose the compartment where the compute instance should reside, and then choose the public subnet as shown in the below image. Click on assign a public IPv4 address to connect from the public internet.
+5. Choose the compartment where the Compute Instance should reside, then choose the public subnet as shown below. Click on assign a public IPv4 address to connect from the public internet.
 
-  ![OCI compute instance VCN](./images/compute-instance-ip.png "OCI compute instance VCN")
+  ![OCI Compute Instance VCN](./images/compute-instance-ip.png "OCI Compute Instance VCN")
 
-6. Choose the default values and click on **Create** instance
+6. Choose the default values and click on **Create** Instance
 
-7. You can use the Remote Desktop to connect to the newly created instance using the **opc** username and with the initial password shown in the console.  You need to change the password at the first login. The network that the instance is in must allow RDP TCP port **3389** in the security list.
-  ![OCI compute instance status](./images/compute-instance-successful.png "OCI compute instance status")
+7. You can use the Remote Desktop to connect to the newly created Instance using the **opc** username and the initial password shown in the console. You need to change the password at the first login. The network that the Instance is in must allow RDP TCP port **3389** in the security list.
+  ![OCI Compute Instance status](./images/compute-instance-successful.png "OCI Compute Instance status")
 
 
   You may now **proceed to the next Task**.
@@ -55,7 +55,7 @@ This lab assumes you have:
 
 ##  Task 3: Configure the witness for the Windows Server Failover Cluster
 
-1. RDP to the Bastion host server using the username **opc** and password, from the Bastion host open the Remote Desktop and connect to the witness server using the private IP Address.
+1. RDP to the Bastion host server using the username **opc** and password. From the Bastion host, open the Remote Desktop and connect to the witness server using the private IP Address.
 
 2. Create a folder name as a witness and share the folder for read and write, and then click on Share folder
 
@@ -70,15 +70,15 @@ This lab assumes you have:
 
 ##  Task 4: Configure the witness in the Windows Server Failover Cluster
 
-1. RDP to the Bastion host server using the username **opc** and password, from the Bastion host open the Remote Desktop and connect to the Node1 or node2 server using the private IP Address.
+1. RDP to the Bastion host server using the username **opc** and password. From the Bastion host, open the Remote Desktop and connect to the Node1 or node2 server using the private IP Address.
 
-2. From the task bar click **search button** and search for **Failover Cluster**.
+2. From the taskbar, click the **search button** and search for **Failover Cluster**.
 
   ![Windows search command](./images/windows-command-search.png "Windows search command")
 
-The Failover Cluster Manager opens as shown in the following image, and then right-click on the cluster name, choose **More Actions** and then chose the **Configure Cluster Quorum Settings**.
+The Failover Cluster Manager opens as shown in the following image, and then right-click on the Cluster name, choose **More Actions**and then select the **Configure Cluster Quorum Settings**.
 
-  ![Configure cluster quorum from failover cluster manager](./images/wsfc-quorum.png "Configure cluster quorum from failover cluster manager")
+  ![Configure Cluster quorum from failover Cluster manager](./images/wsfc-quorum.png "Configure Cluster quorum from failover Cluster manager")
 
 3. The configuration wizard shows as follows:
 
@@ -92,21 +92,21 @@ The Failover Cluster Manager opens as shown in the following image, and then rig
 
   ![Cluster quorum file share witness](./images/wsfc-quorum-configruation-fileshare.png "Cluster quorum file share witness")
 
-6. Provide the path for share folder which created in Task 3, and then click on **Next**.
+6. Provide the path for the shared folder created in Task 3, then click on **Next**.
 
-  ![Cluster quorum file share witness share path](./images/wsfc-quorum-sharepath.png "Cluster quorum file share witness share path")
+  ![Cluster quorum file witness share path](./images/wsfc-quorum-sharepath.png "Cluster quorum file witness share path")
 
 7. The configuration **Confirmation** tab shows as follows, and then click on **Next**.
 
-  ![Cluster quorum file share witness share path conformation](./images/wsfc-quorum-sharepath-confirmation.png "Cluster quorum file share witness share path conformation")
+  ![Cluster quorum witness share path confirmation](./images/wsfc-quorum-sharepath-confirmation.png "Cluster quorum witness share path confirmation")
 
-8. The **Summary** page shows as follows with successful message, and then click on **Finish**.
+8. The **Summary** page shows as follows with a successful message, and then click on **Finish**.
 
-  ![Cluster quorum file share witness configure status](./images/wsfc-quorum-sharepath-summary.png "Cluster quorum file share witness configure status")
+  ![Cluster quorum file witness configure status](./images/wsfc-quorum-sharepath-summary.png "Cluster quorum file witness configure status")
 
-9. The file share witness will be online in cluster manager.
+9. The file share witness will be online in the Cluster Manager.
 
-  ![Cluster quorum file share witness status](./images/wsfc-quorum-sharepath-online.png "Cluster quorum file share witness status")
+  ![Cluster quorum witness status](./images/wsfc-quorum-sharepath-online.png "Cluster quorum witness status")
 
     Congratulations !!! You Have Completed Successfully The Workshop.
 
