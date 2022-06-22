@@ -201,6 +201,7 @@ This lab assumes you have:
 
   ![Microsoft SQL server always on high availability dashboard](./images/mssql-aoag-dashboard.png " ")
 
+  With the above step, you have successfully set up the two-node Windows Server Failover Cluster. You may now **proceed to the next lab**.
 
 ## Acknowledgements
 * **Author** - Ramesh Babu Donti, Principal Cloud Architect, NA Cloud Engineering
